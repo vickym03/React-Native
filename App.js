@@ -1,50 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
+import KeyboardAvoidingComponent from './KeyboardAvoidingComponent';
 
-export default function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  return (
+    // <View> <KeyboardAvoidingComponent/> </View>
 
-    return (
-      <View>
-          <View style={styles.container}>
-          <StatusBar style="auto" />
-          <Text style={styles.header}> Hello, React-Native</Text>
-        </View>
-        
-      </View>
-      );
-  
-  
-}
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+      <KeyboardAvoidingComponent />
+      <Text>Hello, world.</Text>
 
-
-
-
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#006DFF',
-    marginTop: 42,
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  },
-  header: {
-    color: "white",
-    marginTop: -800,
-    fontWeight: "bold",
-    fontSize: 30
-  },
-  input: {
-    height: 20,
-    margin: 12,
-    borderWidth: 1,
-    backgroundColor: "white",
-    color: "black",
-    padding: 10,
-  }
-
-});
+    </View>
+  )
+};
+export default App;
